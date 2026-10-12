@@ -1,0 +1,27 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://shapelessai.com/pricing
+sources:
+- https://shapelessai.com/pricing
+name: ShapelessAI pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Free Forever
+  price_text: $0 / month
+  price: 0
+  description: Free plan with 125 credits and 10 posts a day.
+- name: Spark
+  price_text: $35 / month
+  price: 35
+  description: 750 credits per billing cycle.
+- name: Growth
+  price_text: $100 / month
+  price: 100
+  description: 3,000 credits per billing cycle.
+- name: Studio
+  price_text: $200 / month
+  price: 200
+  description: 7,500 credits per billing cycle.
+docs: https://shapelessai.com/pricing

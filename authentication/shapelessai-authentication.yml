@@ -1,0 +1,34 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://shapelessai.com/docs/auth
+sources:
+- https://shapelessai.com/docs/auth
+- https://shapelessai.com/docs/api
+- https://shapelessai.com/docs/auth.md
+schemes:
+- type: http-bearer
+  name: Authorization
+  evidence: 'A key is `slk_` followed by 40 base64url characters. Send it on every request:
+
+
+    ```bash
+
+    curl -H "Authorization: Bearer slk_..." https://shapelessai.com/api/me
+
+    ```'
+  location: header
+  header: Authorization
+- type: oauth2
+  name: OAuth 2.1
+  evidence: 'It is OAuth 2.1 with dynamic client registration and PKCE, so a host registers itself:
+
+    - Protected-resource metadata: `https://shapelessai.com/.well-known/oauth-protected-resource/mcp`
+
+    - Scopes: `read`, `write`, `publish`, `offline_access`'
+  scopes:
+  - read
+  - write
+  - publish
+  - offline_access
+docs: https://shapelessai.com/docs/auth

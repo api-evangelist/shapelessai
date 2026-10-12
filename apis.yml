@@ -1,29 +1,137 @@
 aid: shapelessai
+
 name: ShapelessAI
-description: 'ShapelessAI is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://shapelessai.com/opengraph-image?d1f04df5468e4746
+
+description: ShapelessAI provides an agentic social media automation platform that creates, designs, and publishes posts, carousels, and short
+  videos across major social networks. Users input a brief description of their product; the AI researches current market trends, generates content,
+  and schedules it, delivering compounded traffic growth. The service offers a free tier with limited daily posts and paid plans starting at $35/month
+  for higher caps and credits. It supports API, CLI, and MCP integrations, enabling developers to drive the agents programmatically.
+
 url: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-12 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-12'
+
 modified: '2026-10-12'
+
 tags:
 - Company
-apis: []
+- AI
+- Social Media
+- Automation
+- SaaS
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: RateLimits
+  url: rate-limits/shapelessai-rate-limits.yml
+- type: Plans
+  url: plans/shapelessai-plans-pricing.yml
+- type: Spectral
+  url: rules/shapelessai-rules.yml
+- type: JSONLD
+  url: json-ld/shapelessai-context.jsonld
+- type: Vocabulary
+  url: vocabulary/shapelessai-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/shapelessai-data-model.yml
+- type: CLI
+  url: cli/shapelessai-cli.yml
+- type: Conventions
+  url: conventions/shapelessai-conventions.yml
+- type: Authentication
+  url: authentication/shapelessai-authentication.yml
+- type: ErrorCatalog
+  url: errors/shapelessai-problem-types.yml
+- type: Conformance
+  url: conformance/shapelessai-conformance.yml
+- type: LLMsTxt
+  url: llms/shapelessai-llms.txt
+- type: WellKnown
+  url: well-known/shapelessai-well-known.yml
+- type: Hosts
+  url: hosts/shapelessai-hosts.yml
+- type: SDKs
+  url: packages/shapelessai-packages.yml
+- type: Packages
+  url: packages/shapelessai-packages.yml
+- type: TermsOfService
+  url: https://shapelessai.com/terms
+- type: PrivacyPolicy
+  url: https://shapelessai.com/privacy
+- type: Pricing
+  url: https://shapelessai.com/pricing
+- type: GitHubOrganization
+  url: https://github.com/FirstClassTree
+- type: DomainSecurity
+  url: security/shapelessai-domain-security.yml
 - type: Website
   url: https://shapelessai.com
 - type: Documentation
   url: https://shapelessai.com/docs/api
+
+apis:
+- aid: shapelessai:shapelessai-api
+  name: ShapelessAI API
+  description: 'ShapelessAI API as documented publicly: 37 operations. Contract generated from the documentation by API Evangelist (2026-10-12);
+    not the provider''s own document.'
+  humanURL: https://shapelessai.com/docs/api
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/shapelessai-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+
 x-submission-notes: social post agent REST + MCP (OAuth), server card
-x-submission-probe: root 200, docs 200, openapi.json 200 OpenAPI 3.1.0 119 ops, llms.txt 200, /mcp 200,
-  soft-404 ok
+
+x-submission-probe: root 200, docs 200, openapi.json 200 OpenAPI 3.1.0 119 ops, llms.txt 200, /mcp 200, soft-404 ok
+
 x-submitted-by: founders@shapelessai.com (email, 2026-10-12)
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  method: derived
+  generated: '2026-10-12'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company serves an API surface but requires credentials before any description of it can be read
+  evidence:
+  - url: https://shapelessai.com/mcp
+    status: 401
+  - url: https://shapelessai.com
+    status: 200
+x-enrichment:
+  date: '2026-10-12'
+  status: enriched
+  artifacts_added: 31
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

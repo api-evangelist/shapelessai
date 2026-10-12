@@ -1,0 +1,75 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://shapelessai.com/capabilities/agent-tools
+sources:
+- https://shapelessai.com/capabilities/agent-tools
+- https://shapelessai.com/docs/cli
+- https://shapelessai.com/ai-tools
+- https://shapelessai.com/ai-tools/submit
+install:
+- method: npx
+  command: npx shapelessai --help
+- method: npm
+  command: npm i -g shapelessai
+commands:
+- group: tools
+  commands:
+  - shapeless tools
+  - shapeless tools run <tool> --input '{...}'
+- group: posts
+  commands:
+  - shapeless posts create --to <connectionId> --text "..."
+  - shapeless posts list --status <status>
+  - shapeless posts show <id>
+  - shapeless posts approve <id> ...
+  - shapeless posts dismiss <id>
+  - shapeless posts publish <id>
+  - shapeless posts mark-posted <id> --url <url>
+- group: jobs
+  commands:
+  - shapeless jobs create <type> ...
+  - shapeless jobs list
+  - shapeless jobs show <id>
+  - shapeless jobs tail <id>
+  - shapeless jobs continue <id> ...
+  - shapeless jobs stop <id>
+- group: characters
+  commands:
+  - shapeless characters voice <name> --describe "..."
+  - shapeless characters voice <name> --clone <file> --consent
+- group: brain
+  commands:
+  - shapeless brain ls
+  - shapeless brain onboarding
+  - shapeless brain get <file>
+  - shapeless brain put <file> --file <path>
+  - shapeless brain import <path>
+  - shapeless brain export --out <file>
+- group: agents
+  commands:
+  - shapeless agents list
+  - shapeless agents wake <id>
+- group: assets
+  commands:
+  - shapeless assets list
+  - shapeless assets upload <path>
+- group: connections
+  commands:
+  - shapeless connections
+  - shapeless connections link linkedin
+- group: platforms
+  commands:
+  - shapeless platforms
+- group: capabilities
+  commands:
+  - shapeless capabilities
+- group: login
+  commands:
+  - shapeless login
+  - shapeless logout
+- group: mcp
+  commands:
+  - shapeless mcp
+binary: shapeless
+docs: https://shapelessai.com/capabilities/agent-tools

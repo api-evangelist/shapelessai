@@ -1,0 +1,25 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://shapelessai.com/docs/auth
+sources:
+- https://shapelessai.com/docs/auth
+- https://shapelessai.com/docs/api
+- https://shapelessai.com/docs/auth.md
+idempotency:
+  coverage: none
+  evidence: The documentation does not describe any idempotency key or header for write operations.
+pagination:
+  style: offset/limit style
+  params:
+  - limit – optional, defaults to 50, up to 200
+  - status – optional filter for GET /api/posts
+  response_fields:
+  - The list endpoints return an array of objects; no explicit pagination cursor fields are documented.
+  evidence: GET /api/posts returns the newest 50 rows by slot and supports ?limit= up to 200 and ?status= filters.
+error_envelope: Responses use HTTP status codes with JSON bodies that include fields such as code, message, and optional upgrade information (e.g.,
+  402 includes code "free_daily_cap" and a upgrades link).
+authentication: 'API keys are sent as a Bearer token in the Authorization header (e.g., "Authorization: Bearer slk_…"). OAuth 2.1 with PKCE is
+  used for the MCP server, with scopes read, write, publish, offline_access.'
+rate_limit_signaling: 600 requests per hour per key; exceeding the limit returns HTTP 429. No specific rate‑limit response headers are documented.
+docs: https://shapelessai.com/docs/auth

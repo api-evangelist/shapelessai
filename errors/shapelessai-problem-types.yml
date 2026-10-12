@@ -1,0 +1,17 @@
+generated: '2026-10-12'
+method: searched
+source: https://shapelessai.com/llms-full.txt
+format: json
+problems:
+  - status: 400
+    title: Bad Request
+    description: "Bad body: missing connectionId or postText, oversized text, or other validation errors."
+  - status: 401
+    title: Unauthorized
+    description: "Unknown or revoked API key."
+  - status: 403
+    title: Forbidden
+    description: "The key is missing the required publish scope."
+  - status: 402
+    title: Payment Required
+    description: "Free daily cap exceeded (10 posts per day)."

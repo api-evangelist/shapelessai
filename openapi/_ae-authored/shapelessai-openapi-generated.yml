@@ -1,0 +1,749 @@
+openapi: 3.1.0
+info:
+  title: ShapelessAI API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 37 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; ShapelessAI has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 33
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://shapelessai.com/docs/api
+paths:
+  /api/ads/campaigns:
+    delete:
+      operationId: delete_api_ads_campaigns
+      tags:
+      - Api
+      summary: Agents (strategies) and the manager
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_api_ads_campaigns
+      tags:
+      - Api
+      summary: Agents (strategies) and the manager
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_ads_campaigns
+      tags:
+      - Api
+      summary: Agents (strategies) and the manager
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/brain/assets:
+    get:
+      operationId: get_api_brain_assets
+      tags:
+      - Api
+      summary: GET /api/brain/assets
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/brain/{brainid}:
+    post:
+      operationId: post_api_brain_brainid
+      tags:
+      - Api
+      summary: POST /api/brain/import write Import a .md/.txt/.pdf/.docx document.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: brainid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at brainId
+  /api/capabilities/{id}/want:
+    post:
+      operationId: post_api_capabilities_id_want
+      tags:
+      - Api
+      summary: POST /api/capabilities/{id}/want any, or none with {email} / {webhookUrl}
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiCapabilitiesIdWantRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/connections/link:
+    delete:
+      operationId: delete_api_connections_link
+      tags:
+      - Api
+      summary: DELETE /api/connections/link write {platform} -> the one URL the human opens to connect an account there.
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/connections/tracked:
+    get:
+      operationId: get_api_connections_tracked
+      tags:
+      - Api
+      summary: GET /api/connections/tracked read
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/connections/{id}:
+    post:
+      operationId: post_api_connections_id
+      tags:
+      - Api
+      summary: POST /api/connections/{id} write
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/connections/{id}/tiktok-creator-info:
+    patch:
+      operationId: patch_api_connections_id_tiktok_creator_info
+      tags:
+      - Api
+      summary: PATCH /api/connections/{id}/tiktok-creator-info write
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/groups/{id}:
+    patch:
+      operationId: patch_api_groups_id
+      tags:
+      - Api
+      summary: Rename or recolor
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiGroupsIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/manager/settings:
+    put:
+      operationId: put_api_manager_settings
+      tags:
+      - Api
+      summary: Agents (strategies) and the manager
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/manager/{managerid}:
+    get:
+      operationId: get_api_manager_managerid
+      tags:
+      - Api
+      summary: Agents (strategies) and the manager
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: managerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at managerId
+    post:
+      operationId: post_api_manager_managerid
+      tags:
+      - Api
+      summary: '"Plan now" through the first active agent'
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: managerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at managerId
+  /api/me/email:
+    get:
+      operationId: get_api_me_email
+      tags:
+      - Api
+      summary: Whether lifecycle email (posts ready, weekly summary) is on, and the last emails we sent.
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_api_me_email
+      tags:
+      - Api
+      summary: write
+      x-source: https://shapelessai.com/docs/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiMeEmailRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/metrics/refresh:
+    post:
+      operationId: post_api_metrics_refresh
+      tags:
+      - Api
+      summary: Refresh stale samples (calls the platforms).
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/metrics/{metricid}:
+    get:
+      operationId: get_api_metrics_metricid
+      tags:
+      - Api
+      summary: GET /api/metrics/followers read Follower counts and the weekly delta.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: metricid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at metricId
+  /api/posts/{id}:
+    get:
+      operationId: get_api_posts_id
+      tags:
+      - Api
+      summary: One row's live state.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiPostsIdResponse'
+      x-evidence:
+        kind: documentation
+  /api/posts/{id}/comments/refresh:
+    post:
+      operationId: post_api_posts_id_comments_refresh
+      tags:
+      - Api
+      summary: Read the thread from the platform now.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/posts/{id}/{id}:
+    post:
+      operationId: post_api_posts_id_id
+      tags:
+      - Api
+      summary: Propose a paid boost of a published Meta post.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiPostsIdIdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 5 example path(s) differing only at id
+  /api/posts/{postid}:
+    post:
+      operationId: post_api_posts_postid
+      tags:
+      - Api
+      summary: Cap endpoint (no description provided)
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: postid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at postId
+  /api/profile/audits:
+    get:
+      operationId: get_api_profile_audits
+      tags:
+      - Api
+      summary: Latest score and open fix count per connected account.
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/strategies/suggest:
+    post:
+      operationId: post_api_strategies_suggest
+      tags:
+      - Api
+      summary: One engine‑studied agent seed for the editor
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/studio/tail:
+    get:
+      operationId: get_api_studio_tail
+      tags:
+      - Api
+      summary: GET /api/studio/tail read Re-attach to a detached run's event log.
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/studio/{studioid}:
+    post:
+      operationId: post_api_studio_studioid
+      tags:
+      - Api
+      summary: POST /api/studio/stop write Stop a detached run.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: studioid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at studioId
+  /api/tools/{name}:
+    get:
+      operationId: get_api_tools_name
+      tags:
+      - Api
+      summary: GET /api/tools/{name} write Run one tool.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v1/jobs:
+    get:
+      operationId: get_api_v1_jobs
+      tags:
+      - Api
+      summary: List jobs with liveness, one page (see Paging ).
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: origin
+        in: query
+        required: false
+        schema:
+          type: string
+        description: filters by who started the thread (job|chat|agent)
+      - name: before
+        in: query
+        required: false
+        schema:
+          type: string
+        description: cursor for paging, the last row's sort key
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_v1_jobs
+      tags:
+      - Api
+      summary: 'POST /api/v1/jobs write Start a job: {goal, label?, budgetUsd?, timezone?, attachments?, characters?} returns 202 {id, title,
+        status}.'
+      x-source: https://shapelessai.com/docs/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1JobsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV1JobsResponse'
+      x-evidence:
+        kind: documentation
+  /api/videos/{videoid}:
+    post:
+      operationId: post_api_videos_videoid
+      tags:
+      - Api
+      summary: 'demo_page : a recorded product demo of a page.'
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: videoid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at videoId
+  /api/wiki/identity:
+    put:
+      operationId: put_api_wiki_identity
+      tags:
+      - Api
+      summary: PUT /api/wiki/identity
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/workspace/file:
+    delete:
+      operationId: delete_api_workspace_file
+      tags:
+      - Api
+      summary: PUT/DELETE /api/workspace/file write Write or delete one file.
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/workspace/{workspaceid}:
+    get:
+      operationId: get_api_workspace_workspaceid
+      tags:
+      - Api
+      summary: GET /api/workspace/export read The whole brain as a zip.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at workspaceId
+  /api/{apiid}:
+    delete:
+      operationId: delete_api_apiid
+      tags:
+      - Api
+      summary: DELETE /api/ad-accounts?id= publish Unlink an ad account.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 4 example path(s) differing only at apiId
+    get:
+      operationId: get_api_apiid
+      tags:
+      - Api
+      summary: GET /api/ad-accounts read Connected ad accounts (identity only, no tokens) + whether connecting one is configured.
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 14 example path(s) differing only at apiId
+    patch:
+      operationId: patch_api_apiid
+      tags:
+      - Api
+      summary: Agents (strategies) and the manager
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at apiId
+    post:
+      operationId: post_api_apiid
+      tags:
+      - Api
+      summary: Send a drafted comment or reply, or run an approved boost or campaign change
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiApiidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 12 example path(s) differing only at apiId
+components:
+  schemas:
+    PostApiCapabilitiesIdWantRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        webhookUrl:
+          type: string
+    PatchApiGroupsIdRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        color:
+          type: string
+    PutApiMeEmailRequest:
+      type: object
+      properties:
+        lifecycle:
+          type: boolean
+          description: true to enable lifecycle email
+      required:
+      - lifecycle
+    GetApiPostsIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+        inspiration:
+          type: object
+        metrics:
+          type: object
+    PostApiPostsIdIdRequest:
+      type: object
+      properties:
+        budgetCents:
+          type: integer
+        days:
+          type: integer
+        objective:
+          type: string
+      required:
+      - budgetCents
+      - days
+      - objective
+    PostApiV1JobsRequest:
+      type: object
+      properties:
+        goal:
+          type: string
+        label:
+          type: string
+        budgetUsd:
+          type: string
+        timezone:
+          type: string
+        attachments:
+          type: string
+        characters:
+          type: string
+      required:
+      - goal
+    PostApiV1JobsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        status:
+          type: string
+    PostApiApiidRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        prompt:
+          type: string
+        aspectRatio:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api

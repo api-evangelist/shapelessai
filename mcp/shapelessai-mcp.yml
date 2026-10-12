@@ -1,0 +1,200 @@
+generated: '2026-10-12'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/shapelessai-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.shapelessai.com, shapelessai.com; verdict gated (https://shapelessai.com/mcp
+  answered 401: the edge authenticates before it routes, which proves nothing either way). Candidate tools below are derived from the 37 operation(s)
+  in the provider''s own OpenAPI (37 listed); they describe what a server WOULD expose, not one that exists.'
+tools:
+- name: delete_api_ads_campaigns
+  operationId: delete_api_ads_campaigns
+  method: DELETE
+  path: /api/ads/campaigns
+  description: Agents (strategies) and the manager
+- name: get_api_ads_campaigns
+  operationId: get_api_ads_campaigns
+  method: GET
+  path: /api/ads/campaigns
+  description: Agents (strategies) and the manager
+- name: post_api_ads_campaigns
+  operationId: post_api_ads_campaigns
+  method: POST
+  path: /api/ads/campaigns
+  description: Agents (strategies) and the manager
+- name: get_api_brain_assets
+  operationId: get_api_brain_assets
+  method: GET
+  path: /api/brain/assets
+  description: GET /api/brain/assets
+- name: post_api_brain_brainid
+  operationId: post_api_brain_brainid
+  method: POST
+  path: /api/brain/{brainid}
+  description: POST /api/brain/import write Import a .md/.txt/.pdf/.docx document.
+- name: post_api_capabilities_id_want
+  operationId: post_api_capabilities_id_want
+  method: POST
+  path: /api/capabilities/{id}/want
+  description: POST /api/capabilities/{id}/want any, or none with {email} / {webhookUrl}
+- name: delete_api_connections_link
+  operationId: delete_api_connections_link
+  method: DELETE
+  path: /api/connections/link
+  description: DELETE /api/connections/link write {platform} -> the one URL the human opens to connect an account there.
+- name: get_api_connections_tracked
+  operationId: get_api_connections_tracked
+  method: GET
+  path: /api/connections/tracked
+  description: GET /api/connections/tracked read
+- name: post_api_connections_id
+  operationId: post_api_connections_id
+  method: POST
+  path: /api/connections/{id}
+  description: POST /api/connections/{id} write
+- name: patch_api_connections_id_tiktok_creator_info
+  operationId: patch_api_connections_id_tiktok_creator_info
+  method: PATCH
+  path: /api/connections/{id}/tiktok-creator-info
+  description: PATCH /api/connections/{id}/tiktok-creator-info write
+- name: patch_api_groups_id
+  operationId: patch_api_groups_id
+  method: PATCH
+  path: /api/groups/{id}
+  description: Rename or recolor
+- name: put_api_manager_settings
+  operationId: put_api_manager_settings
+  method: PUT
+  path: /api/manager/settings
+  description: Agents (strategies) and the manager
+- name: get_api_manager_managerid
+  operationId: get_api_manager_managerid
+  method: GET
+  path: /api/manager/{managerid}
+  description: Agents (strategies) and the manager
+- name: post_api_manager_managerid
+  operationId: post_api_manager_managerid
+  method: POST
+  path: /api/manager/{managerid}
+  description: '"Plan now" through the first active agent'
+- name: get_api_me_email
+  operationId: get_api_me_email
+  method: GET
+  path: /api/me/email
+  description: Whether lifecycle email (posts ready, weekly summary) is on, and the last emails we sent.
+- name: put_api_me_email
+  operationId: put_api_me_email
+  method: PUT
+  path: /api/me/email
+  description: write
+- name: post_api_metrics_refresh
+  operationId: post_api_metrics_refresh
+  method: POST
+  path: /api/metrics/refresh
+  description: Refresh stale samples (calls the platforms).
+- name: get_api_metrics_metricid
+  operationId: get_api_metrics_metricid
+  method: GET
+  path: /api/metrics/{metricid}
+  description: GET /api/metrics/followers read Follower counts and the weekly delta.
+- name: get_api_posts_id
+  operationId: get_api_posts_id
+  method: GET
+  path: /api/posts/{id}
+  description: One row's live state.
+- name: post_api_posts_id_comments_refresh
+  operationId: post_api_posts_id_comments_refresh
+  method: POST
+  path: /api/posts/{id}/comments/refresh
+  description: Read the thread from the platform now.
+- name: post_api_posts_id_id
+  operationId: post_api_posts_id_id
+  method: POST
+  path: /api/posts/{id}/{id}
+  description: Propose a paid boost of a published Meta post.
+- name: post_api_posts_postid
+  operationId: post_api_posts_postid
+  method: POST
+  path: /api/posts/{postid}
+  description: Cap endpoint (no description provided)
+- name: get_api_profile_audits
+  operationId: get_api_profile_audits
+  method: GET
+  path: /api/profile/audits
+  description: Latest score and open fix count per connected account.
+- name: post_api_strategies_suggest
+  operationId: post_api_strategies_suggest
+  method: POST
+  path: /api/strategies/suggest
+  description: One engine‑studied agent seed for the editor
+- name: get_api_studio_tail
+  operationId: get_api_studio_tail
+  method: GET
+  path: /api/studio/tail
+  description: GET /api/studio/tail read Re-attach to a detached run's event log.
+- name: post_api_studio_studioid
+  operationId: post_api_studio_studioid
+  method: POST
+  path: /api/studio/{studioid}
+  description: POST /api/studio/stop write Stop a detached run.
+- name: get_api_tools_name
+  operationId: get_api_tools_name
+  method: GET
+  path: /api/tools/{name}
+  description: GET /api/tools/{name} write Run one tool.
+- name: get_api_v1_jobs
+  operationId: get_api_v1_jobs
+  method: GET
+  path: /api/v1/jobs
+  description: List jobs with liveness, one page (see Paging ).
+- name: post_api_v1_jobs
+  operationId: post_api_v1_jobs
+  method: POST
+  path: /api/v1/jobs
+  description: 'POST /api/v1/jobs write Start a job: {goal, label?, budgetUsd?, timezone?, attachments?, characters?} returns 202 {id, title,
+    status}.'
+- name: post_api_videos_videoid
+  operationId: post_api_videos_videoid
+  method: POST
+  path: /api/videos/{videoid}
+  description: 'demo_page : a recorded product demo of a page.'
+- name: put_api_wiki_identity
+  operationId: put_api_wiki_identity
+  method: PUT
+  path: /api/wiki/identity
+  description: PUT /api/wiki/identity
+- name: delete_api_workspace_file
+  operationId: delete_api_workspace_file
+  method: DELETE
+  path: /api/workspace/file
+  description: PUT/DELETE /api/workspace/file write Write or delete one file.
+- name: get_api_workspace_workspaceid
+  operationId: get_api_workspace_workspaceid
+  method: GET
+  path: /api/workspace/{workspaceid}
+  description: GET /api/workspace/export read The whole brain as a zip.
+- name: delete_api_apiid
+  operationId: delete_api_apiid
+  method: DELETE
+  path: /api/{apiid}
+  description: DELETE /api/ad-accounts?id= publish Unlink an ad account.
+- name: get_api_apiid
+  operationId: get_api_apiid
+  method: GET
+  path: /api/{apiid}
+  description: GET /api/ad-accounts read Connected ad accounts (identity only, no tokens) + whether connecting one is configured.
+- name: patch_api_apiid
+  operationId: patch_api_apiid
+  method: PATCH
+  path: /api/{apiid}
+  description: Agents (strategies) and the manager
+- name: post_api_apiid
+  operationId: post_api_apiid
+  method: POST
+  path: /api/{apiid}
+  description: Send a drafted comment or reply, or run an approved boost or campaign change
