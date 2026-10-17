@@ -1,0 +1,101 @@
+openapi: 3.2.0
+info:
+  title: ShapelessAI Jobs API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 37 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; ShapelessAI has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 33
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://shapelessai.com/docs/api
+security:
+- bearer: []
+tags:
+- name: Jobs
+paths:
+  /api/v1/jobs:
+    get:
+      operationId: get_api_v1_jobs
+      tags:
+      - Jobs
+      summary: List jobs with liveness, one page (see Paging )
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: origin
+        in: query
+        required: false
+        schema:
+          type: string
+        description: filters by who started the thread (job|chat|agent)
+      - name: before
+        in: query
+        required: false
+        schema:
+          type: string
+        description: cursor for paging, the last row's sort key
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_v1_jobs
+      tags:
+      - Jobs
+      summary: 'POST /api/v1/jobs write Start a job: {goal, label?, budgetUsd?, timezone?…'
+      x-source: https://shapelessai.com/docs/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1JobsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV1JobsResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostApiV1JobsRequest:
+      type: object
+      properties:
+        goal:
+          type: string
+        label:
+          type: string
+        budgetUsd:
+          type: string
+        timezone:
+          type: string
+        attachments:
+          type: string
+        characters:
+          type: string
+      required:
+      - goal
+    PostApiV1JobsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        status:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

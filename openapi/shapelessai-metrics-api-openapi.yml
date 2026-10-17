@@ -1,0 +1,59 @@
+openapi: 3.2.0
+info:
+  title: ShapelessAI Metrics API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 37 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; ShapelessAI has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 33
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://shapelessai.com/docs/api
+security:
+- bearer: []
+tags:
+- name: Metrics
+paths:
+  /api/metrics/refresh:
+    post:
+      operationId: post_api_metrics_refresh
+      tags:
+      - Metrics
+      summary: Refresh stale samples (calls the platforms)
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/metrics/{metricid}:
+    get:
+      operationId: get_api_metrics_metricid
+      tags:
+      - Metrics
+      summary: GET /api/metrics/followers read Follower counts and the weekly delta
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: metricid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at metricId
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

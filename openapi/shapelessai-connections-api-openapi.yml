@@ -1,0 +1,88 @@
+openapi: 3.2.0
+info:
+  title: ShapelessAI Connections API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 37 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; ShapelessAI has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 33
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://shapelessai.com/docs/api
+security:
+- bearer: []
+tags:
+- name: Connections
+paths:
+  /api/connections/link:
+    delete:
+      operationId: delete_api_connections_link
+      tags:
+      - Connections
+      summary: DELETE /api/connections/link write {platform} -> the one URL the human opens to…
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/connections/tracked:
+    get:
+      operationId: get_api_connections_tracked
+      tags:
+      - Connections
+      summary: GET /api/connections/tracked read
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/connections/{id}:
+    post:
+      operationId: post_api_connections_id
+      tags:
+      - Connections
+      summary: POST /api/connections/{id} write
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/connections/{id}/tiktok-creator-info:
+    patch:
+      operationId: patch_api_connections_id_tiktok_creator_info
+      tags:
+      - Connections
+      summary: PATCH /api/connections/{id}/tiktok-creator-info write
+      x-source: https://shapelessai.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

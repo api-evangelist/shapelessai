@@ -88,15 +88,15 @@ common:
   url: https://shapelessai.com/docs/api
 
 apis:
-- aid: shapelessai:shapelessai-api
-  name: ShapelessAI API
-  description: 'ShapelessAI API as documented publicly: 37 operations. Contract generated from the documentation by API Evangelist (2026-10-12);
-    not the provider''s own document.'
+- aid: shapelessai:shapelessai-ads-api
+  name: ShapelessAI Ads API
+  description: The Ads API from ShapelessAI — 1 operation(s) for ads.
   humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Ads
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/shapelessai-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/shapelessai-ads-api-openapi.yml
   - type: JSONSchema
     url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
   - type: JSONSchema
@@ -109,7 +109,363 @@ apis:
     url: json-schema/shapelessai-post-api-apiid-request-schema.json
   - type: JSONSchema
     url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
-
+- aid: shapelessai:shapelessai-brain-api
+  name: ShapelessAI Brain API
+  description: The Brain API from ShapelessAI — 2 operation(s) for brain.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Brain
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-brain-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-capabilities-api
+  name: ShapelessAI Capabilities API
+  description: The Capabilities API from ShapelessAI — 1 operation(s) for capabilities.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Capabilities
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-capabilities-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-connections-api
+  name: ShapelessAI Connections API
+  description: The Connections API from ShapelessAI — 4 operation(s) for connections.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Connections
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-connections-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-groups-api
+  name: ShapelessAI Groups API
+  description: The Groups API from ShapelessAI — 1 operation(s) for groups.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-groups-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-jobs-api
+  name: ShapelessAI Jobs API
+  description: The Jobs API from ShapelessAI — 1 operation(s) for jobs.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-jobs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-manager-api
+  name: ShapelessAI Manager API
+  description: The Manager API from ShapelessAI — 2 operation(s) for manager.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Manager
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-manager-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-me-api
+  name: ShapelessAI Me API
+  description: The Me API from ShapelessAI — 1 operation(s) for me.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-me-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-metrics-api
+  name: ShapelessAI Metrics API
+  description: The Metrics API from ShapelessAI — 2 operation(s) for metrics.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-metrics-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-posts-api
+  name: ShapelessAI Posts API
+  description: The Posts API from ShapelessAI — 4 operation(s) for posts.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Posts
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-posts-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-profile-api
+  name: ShapelessAI Profile API
+  description: The Profile API from ShapelessAI — 1 operation(s) for profile.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-profile-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-shapelessai-api-api
+  name: ShapelessAI ShapelessAI API
+  description: The ShapelessAI API API from ShapelessAI — 1 operation(s) for shapelessai api.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - ShapelessAI API
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-shapelessai-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-strategies-api
+  name: ShapelessAI Strategies API
+  description: The Strategies API from ShapelessAI — 1 operation(s) for strategies.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Strategies
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-strategies-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-studio-api
+  name: ShapelessAI Studio API
+  description: The Studio API from ShapelessAI — 2 operation(s) for studio.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Studio
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-studio-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-tools-api
+  name: ShapelessAI Tools API
+  description: The Tools API from ShapelessAI — 1 operation(s) for tools.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Tools
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-tools-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-videos-api
+  name: ShapelessAI Videos API
+  description: The Videos API from ShapelessAI — 1 operation(s) for videos.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Videos
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-videos-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-wiki-api
+  name: ShapelessAI Wiki API
+  description: The Wiki API from ShapelessAI — 1 operation(s) for wiki.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Wiki
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-wiki-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
+- aid: shapelessai:shapelessai-workspace-api
+  name: ShapelessAI Workspace API
+  description: The Workspace API from ShapelessAI — 2 operation(s) for workspace.
+  humanURL: https://shapelessai.com/docs/api
+  tags:
+  - Workspace
+  properties:
+  - type: OpenAPI
+    url: openapi/shapelessai-workspace-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-posts-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-get-api-posts-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-put-api-me-email-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shapelessai-post-api-v1-jobs-response-schema.json
 x-submission-notes: social post agent REST + MCP (OAuth), server card
 
 x-submission-probe: root 200, docs 200, openapi.json 200 OpenAPI 3.1.0 119 ops, llms.txt 200, /mcp 200, soft-404 ok

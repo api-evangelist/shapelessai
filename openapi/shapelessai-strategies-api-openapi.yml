@@ -1,0 +1,40 @@
+openapi: 3.2.0
+info:
+  title: ShapelessAI Strategies API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 37 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; ShapelessAI has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 4
+    documentation: 33
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://shapelessai.com/docs/api
+security:
+- bearer: []
+tags:
+- name: Strategies
+paths:
+  /api/strategies/suggest:
+    post:
+      operationId: post_api_strategies_suggest
+      tags:
+      - Strategies
+      summary: One engine‑studied agent seed for the editor
+      x-source: https://shapelessai.com/docs/api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
