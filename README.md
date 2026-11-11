@@ -72,7 +72,7 @@ ShapelessAI provides an agentic social media automation platform that creates, d
 
 Everything profiled for ShapelessAI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/shapelessai/](https://apis.io/providers/shapelessai/)** — or go straight to one of the APIs or properties below.
 
-### APIs (18)
+### APIs (39)
 
 - [ShapelessAI Ads API](https://apis.io/apis/shapelessai/shapelessai-ads-api/) — The Ads API from ShapelessAI — 1 operation(s) for ads.
 - [ShapelessAI Brain API](https://apis.io/apis/shapelessai/shapelessai-brain-api/) — The Brain API from ShapelessAI — 2 operation(s) for brain.
@@ -92,20 +92,61 @@ Everything profiled for ShapelessAI is published on APIs.io rather than in this 
 - [ShapelessAI Videos API](https://apis.io/apis/shapelessai/shapelessai-videos-api/) — The Videos API from ShapelessAI — 1 operation(s) for videos.
 - [ShapelessAI Wiki API](https://apis.io/apis/shapelessai/shapelessai-wiki-api/) — The Wiki API from ShapelessAI — 1 operation(s) for wiki.
 - [ShapelessAI Workspace API](https://apis.io/apis/shapelessai/shapelessai-workspace-api/) — The Workspace API from ShapelessAI — 2 operation(s) for workspace.
+- [ShapelessAI Actions API](https://apis.io/apis/shapelessai/shapelessai-actions-api/) — The Actions API from ShapelessAI — 3 operation(s) for actions.
+- [ShapelessAI Ad Accounts API](https://apis.io/apis/shapelessai/shapelessai-ad-accounts-api/) — The Ad Accounts API from ShapelessAI — 1 operation(s) for ad accounts.
+- [ShapelessAI Ai Tools API](https://apis.io/apis/shapelessai/shapelessai-ai-tools-api/) — The Ai Tools API from ShapelessAI — 9 operation(s) for ai tools.
+- [ShapelessAI Assets API](https://apis.io/apis/shapelessai/shapelessai-assets-api/) — The Assets API from ShapelessAI — 1 operation(s) for assets.
+- [ShapelessAI Captions API](https://apis.io/apis/shapelessai/shapelessai-captions-api/) — The Captions API from ShapelessAI — 1 operation(s) for captions.
+- [ShapelessAI Carousels API](https://apis.io/apis/shapelessai/shapelessai-carousels-api/) — The Carousels API from ShapelessAI — 1 operation(s) for carousels.
+- [ShapelessAI Characters API](https://apis.io/apis/shapelessai/shapelessai-characters-api/) — The Characters API from ShapelessAI — 3 operation(s) for characters.
+- [ShapelessAI Conversations API](https://apis.io/apis/shapelessai/shapelessai-conversations-api/) — The Conversations API from ShapelessAI — 5 operation(s) for conversations.
+- [ShapelessAI Identities API](https://apis.io/apis/shapelessai/shapelessai-identities-api/) — The Identities API from ShapelessAI — 1 operation(s) for identities.
+- [ShapelessAI Identity API](https://apis.io/apis/shapelessai/shapelessai-identity-api/) — The Identity API from ShapelessAI — 13 operation(s) for identity.
+- [ShapelessAI Images API](https://apis.io/apis/shapelessai/shapelessai-images-api/) — The Images API from ShapelessAI — 1 operation(s) for images.
+- [ShapelessAI Inbox API](https://apis.io/apis/shapelessai/shapelessai-inbox-api/) — The Inbox API from ShapelessAI — 1 operation(s) for inbox.
+- [ShapelessAI Influencers API](https://apis.io/apis/shapelessai/shapelessai-influencers-api/) — The Influencers API from ShapelessAI — 1 operation(s) for influencers.
+- [ShapelessAI Instagram API](https://apis.io/apis/shapelessai/shapelessai-instagram-api/) — The Instagram API from ShapelessAI — 1 operation(s) for instagram.
+- [ShapelessAI Media API](https://apis.io/apis/shapelessai/shapelessai-media-api/) — The Media API from ShapelessAI — 1 operation(s) for media.
+- [ShapelessAI Openapi.json API](https://apis.io/apis/shapelessai/shapelessai-openapi-json-api/) — The Openapi.json API from ShapelessAI — 1 operation(s) for openapi.json.
+- [ShapelessAI Platforms API](https://apis.io/apis/shapelessai/shapelessai-platforms-api/) — The Platforms API from ShapelessAI — 1 operation(s) for platforms.
+- [ShapelessAI References API](https://apis.io/apis/shapelessai/shapelessai-references-api/) — The References API from ShapelessAI — 5 operation(s) for references.
+- [ShapelessAI Speech API](https://apis.io/apis/shapelessai/shapelessai-speech-api/) — The Speech API from ShapelessAI — 1 operation(s) for speech.
+- [ShapelessAI Thumbnails API](https://apis.io/apis/shapelessai/shapelessai-thumbnails-api/) — The Thumbnails API from ShapelessAI — 1 operation(s) for thumbnails.
+- [ShapelessAI Trends API](https://apis.io/apis/shapelessai/shapelessai-trends-api/) — The Trends API from ShapelessAI — 1 operation(s) for trends.
 
 ### Published properties
 
 Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-#### JSON Schema (6)
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [shapelessai-mcp.yml](https://apis.io/servers/shapelessai/shapelessai-mcp-yml/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [ShapelessAI Agentic Access](https://apis.io/agentic-access/shapelessai/shapelessai-agentic-access/)
+
+#### JSON Schema (14)
 
 The data models the API reads and writes.
 
 - [GetApiPostsIdResponse](https://apis.io/schemas/shapelessai/shapelessai-get-api-posts-id-response/)
+- [IdentityExpandInput](https://apis.io/schemas/shapelessai/shapelessai-identity-expand-input/)
+- [IdentityGraphEvent](https://apis.io/schemas/shapelessai/shapelessai-identity-graph-event/)
+- [Onboarding](https://apis.io/schemas/shapelessai/shapelessai-onboarding/)
+- [PatchApiGroupsIdRequest](https://apis.io/schemas/shapelessai/shapelessai-patch-api-groups-id-request/)
+- [Post](https://apis.io/schemas/shapelessai/shapelessai-post/)
 - [PostApiApiidRequest](https://apis.io/schemas/shapelessai/shapelessai-post-api-apiid-request/)
+- [PostApiCapabilitiesIdWantRequest](https://apis.io/schemas/shapelessai/shapelessai-post-api-capabilities-id-want-request/)
 - [PostApiPostsIdIdRequest](https://apis.io/schemas/shapelessai/shapelessai-post-api-posts-id-id-request/)
 - [PostApiV1JobsRequest](https://apis.io/schemas/shapelessai/shapelessai-post-api-v1-jobs-request/)
 - [PostApiV1JobsResponse](https://apis.io/schemas/shapelessai/shapelessai-post-api-v1-jobs-response/)
+- [PostCreate](https://apis.io/schemas/shapelessai/shapelessai-post-create/)
+- [PullEstimate](https://apis.io/schemas/shapelessai/shapelessai-pull-estimate/)
 - [PutApiMeEmailRequest](https://apis.io/schemas/shapelessai/shapelessai-put-api-me-email-request/)
 
 #### JSON-LD (1)
@@ -120,24 +161,38 @@ Spectral rulesets for the provider's contracts.
 
 - [ShapelessAI API Rules](https://apis.io/rules/shapelessai/shapelessai-rules/)
 
-#### Security (2)
+#### Security (3)
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Shapelessai Authentication](https://apis.io/security/shapelessai/shapelessai-authentication/)
-- [Shapelessai Domain Security](https://apis.io/security/shapelessai/shapelessai-domain-security/)
+- [ShapelessAI Authentication](https://apis.io/security/shapelessai/shapelessai-authentication/)
+- [ShapelessAI Domain Security](https://apis.io/security/shapelessai/shapelessai-domain-security/)
+- [ShapelessAI Vulnerability Disclosure](https://apis.io/security/shapelessai/shapelessai-vulnerability-disclosure/)
 
-#### Plans and pricing (1)
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [ShapelessAI Scopes](https://apis.io/scopes/shapelessai/shapelessai-scopes/)
+
+#### Plans and pricing (2)
 
 Published plans, tiers and prices.
 
-- [Shapelessai Plans Pricing](https://apis.io/plans/shapelessai/shapelessai-plans-pricing/)
+- [ShapelessAI Plans Pricing](https://apis.io/plans/shapelessai/shapelessai-plans-pricing/)
+- [ShapelessAI Price Estimates](https://apis.io/plans/shapelessai/shapelessai-price-estimates/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Shapelessai Rate Limits](https://apis.io/rate-limits/shapelessai/shapelessai-rate-limits/)
+- [ShapelessAI Rate Limits](https://apis.io/rate-limits/shapelessai/shapelessai-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [ShapelessAI Finops](https://apis.io/finops/shapelessai/shapelessai-finops/)
 
 ## Where to find this API
 
@@ -146,6 +201,8 @@ Links to the company's own pages. This repository publishes no copy of their spe
 - [Website](https://shapelessai.com)
 - [Documentation](https://shapelessai.com/docs/api)
 - [Pricing](https://shapelessai.com/pricing)
+- [Blog](https://shapelessai.com/blog)
+- [Security](https://shapelessai.com/privacy)
 - [Terms of service](https://shapelessai.com/terms)
 - [Privacy policy](https://shapelessai.com/privacy)
 - [GitHub](https://github.com/FirstClassTree)
